@@ -1,0 +1,7 @@
+#setup
+we use  vite here
+(public)- this use for storing images and all the data required 
+(src)- in this we write our all code here
+
+
+
