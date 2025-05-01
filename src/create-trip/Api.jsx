@@ -6,6 +6,7 @@ import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 import { SelectBudgetOptions, SelectTravelsList } from "@/constants/options";
 import { toast } from "sonner";
 import { AI_PROMPT } from "@/constants/options";
+import AIModel from '../Service/AIModel.jsx';
 import { chatSession } from "@/Service/AiModel.jsx";
 import {
   Dialog,
