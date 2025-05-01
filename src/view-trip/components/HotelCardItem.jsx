@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import React, {useEffect , useState} from 'react'
-import { GetPlaceDetails, PHOTO_REF_URL } from '../../service/GlobalApi';
+import { GetPlaceDetails, PHOTO_REF_URL } from '../../Service/GlobalApi';
 
 
 

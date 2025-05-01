@@ -1,4 +1,4 @@
-import { db } from '@/service/firebaseconfig';
+import { db } from '@/Service/firebaseconfig';
 import React from 'react'
 import { useParams } from 'react-router-dom';
 import InfoSection from '../components/InfoSection';

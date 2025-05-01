@@ -1,4 +1,4 @@
-import { GetPlaceDetails} from '@/service/GlobalApi';
+import { GetPlaceDetails} from '@/Service/GlobalApi';
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react';

@@ -6,7 +6,7 @@ import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 import { SelectBudgetOptions, SelectTravelsList } from "@/constants/options";
 import { toast } from "sonner";
 import { AI_PROMPT } from "@/constants/options";
-import { chatSession } from "@/service/AiModel";
+import { chatSession } from "@/Service/AiModel";
 import {
   Dialog,
   DialogContent,
@@ -19,7 +19,7 @@ import { FcGoogle } from "react-icons/fc";
 import { useGoogleLogin } from "@react-oauth/google";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { setDoc, doc } from "firebase/firestore";
-import { db } from "@/service/firebaseconfig";
+import { db } from "@/Service/firebaseconfig";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
