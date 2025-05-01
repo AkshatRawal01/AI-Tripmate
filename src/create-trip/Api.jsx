@@ -19,7 +19,7 @@ import { FcGoogle } from "react-icons/fc";
 import { useGoogleLogin } from "@react-oauth/google";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { setDoc, doc } from "firebase/firestore";
-import { db } from "@/Service/firebaseconfig";
+import { db } from "@/firebase/firebaseconfig";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 

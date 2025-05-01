@@ -1,4 +1,4 @@
-import { db } from '@/Service/firebaseconfig';
+import { db } from '@/firebase/firebaseconfig';
 import React from 'react'
 import { useParams } from 'react-router-dom';
 import InfoSection from '../components/InfoSection';
@@ -8,6 +8,9 @@ import { doc, getDoc } from 'firebase/firestore';
 import Hotels from '../components/hotels';
 import PlacesToVisit from '../components/PlacesToVisit';
 import Footer from '../components/Footer';
+~
+
+
 
 function Viewtrip()  {
 
