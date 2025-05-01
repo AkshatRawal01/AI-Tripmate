@@ -5,7 +5,7 @@ import InfoSection from '../components/InfoSection';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { doc, getDoc } from 'firebase/firestore';
-import Hotels from '../components/hotels';
+import Hotels from '../components/Hotels';
 import PlacesToVisit from '../components/PlacesToVisit';
 import Footer from '../components/Footer';
 ~
