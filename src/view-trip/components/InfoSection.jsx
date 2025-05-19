@@ -33,9 +33,10 @@ function InfoSection({trip}) {
   return (
     <div>
         <img
-        src={PhotoUrl}
+        src={PhotoUrl ? PhotoUrl : "/placeholder.jpg"}
         className="h-[340px] w-full object-cover rounded-xl"
         alt="photo"
+        onError={e => { e.target.src = "/placeholder.jpg"; }}
       />
 
       <div className="flex justify-between items-center">

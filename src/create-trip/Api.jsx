@@ -6,8 +6,7 @@ import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 import { SelectBudgetOptions, SelectTravelsList } from "@/constants/options";
 import { toast } from "sonner";
 import { AI_PROMPT } from "@/constants/options";
-import AIModel from '../Service/AIModel.jsx';
-import { chatSession } from "@/Service/AiModel.jsx";
+import chatSession from '../Service/AIModel.jsx';
 import {
   Dialog,
   DialogContent,
@@ -150,7 +149,7 @@ function Api() {
           <br></br> Just share a few details, and our intelligent trip planner
           will craft a <span className="font-bold">personalized itinerary</span>{" "}
           tailored to your preferences. Whether you prefer mountain adventures,
-          beachside relaxation, or cultural explorations, we’ve got you covered.
+          beachside relaxation, or cultural explorations, we've got you covered.
         </p>
 
         <div className="mt-20 flex flex-col gap-10">

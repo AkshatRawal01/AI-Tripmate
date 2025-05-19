@@ -19,7 +19,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
   };
   
   
-   export const chatSession = model.startChat({
+   const chatSession = model.startChat({
       generationConfig,
       history: [
         {
@@ -36,5 +36,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
         },
       ],
     });
+
+export default chatSession;
   
    

@@ -27,8 +27,11 @@ function PlaceCardItem({place}) {
   return (
     <Link to ={'https://www.google.com/maps/search/?api=1&query='+ place.placeName} target='_blank'>
     <div className='border rounded-xl p-3 mt-2 flex gap-5 hover:scale-103 transition-all hover:shadow-md cursor-pointer'>
-        <img src={PhotoUrl?PhotoUrl:"/placeholder.jpg"}
-        className='w-[140px] h-[140px] rounded-xl object-cover'
+        <img 
+          src={PhotoUrl ? PhotoUrl : "/placeholder.jpg"}
+          className='w-[140px] h-[140px] rounded-xl object-cover'
+          alt={place?.placeName}
+          onError={e => { e.target.src = "/placeholder.jpg"; }}
         />
         <div>
             <h2 className='font-bold text-lg'>{place.placeName}</h2>

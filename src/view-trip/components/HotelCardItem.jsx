@@ -29,7 +29,11 @@ function HotelCardItem({hotel}) {
   return (
     <Link to={'https://www.google.com/maps/search/?api=1&query='+ hotel.hotelName+"," + hotel?.hotelAddress} target='_blank'>
     <div className='hover:scale-105 transition-all cursor-pointer'>
-        <img className='rounded-xl h-[200px] w-full object-cover ' src={PhotoUrl?PhotoUrl:"/placeholder.jpg"}  />
+        <img className='rounded-xl h-[200px] w-full object-cover ' 
+             src={PhotoUrl ? PhotoUrl : "/placeholder.jpg"}
+             alt={hotel?.hotelName}
+             onError={e => { e.target.src = "/placeholder.jpg"; }}
+        />
        
         <div className='my-2 flex flex-col gap-2'>
             <h2 className='font-medium'>{hotel?.hotelName}</h2>
