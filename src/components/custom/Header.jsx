@@ -7,7 +7,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import { googleLogout, useGoogleLogin } from '@react-oauth/google';
-import { useNavigation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FcGoogle } from "react-icons/fc";
 import axios from "axios";
 import {
@@ -21,10 +21,9 @@ import {
 
 
 function Header() {
-
+  const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("user"));
   const [openDialog, setOpenDialog] = useState(false);
-  // const navigation = useNavigation();
 
     useEffect(()=>{
         console.log(user)
@@ -36,8 +35,8 @@ function Header() {
         GetUserProfile(codeResp);
       },
       onError: (error) => console.error("❌ Login Failed:", error),
-      flow: "implicit", // Use implicit flow to ensure popup works
-      ux_mode: "popup", // Ensure it opens in a popup
+      flow: "implicit",
+      ux_mode: "popup",
     });
   
   const GetUserProfile = async (tokenInfo) => {
@@ -59,7 +58,6 @@ function Header() {
   
         console.log("✅ User Info Response:", response.data);
   
-        // Store user data before closing the dialog
         localStorage.setItem("user", JSON.stringify(response.data));
         setOpenDialog(false);
   
@@ -78,12 +76,20 @@ function Header() {
       <div>
         {user?
           <div className='flex items-center gap-3'>
-            <a href="/my-trips">
-            <Button variant="outline" className="rounded-full"> My Trips </Button>
-            </a>
-            <a href="/create-trip">
-            <Button variant="outline" className="rounded-full"> + Create Trip </Button>
-            </a>
+            <Button 
+              variant="outline" 
+              className="rounded-full"
+              onClick={() => navigate('/my-trips')}
+            > 
+              My Trips 
+            </Button>
+            <Button 
+              variant="outline" 
+              className="rounded-full"
+              onClick={() => navigate('/create-trip')}
+            > 
+              + Create Trip 
+            </Button>
            
             <Popover>
                 <PopoverTrigger> <img src={user?.picture} className='h-[35px] w-[35px] rounded-full'/></PopoverTrigger>
